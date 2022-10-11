@@ -1,7 +1,28 @@
 import ReactDOM from "react-dom/client";
 
 // add the green inside this function
-const Alert = () => {
+const Alert = (props) => {
+
+	if (props.color === 'red') {
+		return (
+			<div className="alert alert-danger" role="alert">
+
+				{props.text}
+			</div>
+		)
+	} else if (props.color === "orange") {
+		return (
+			<div className="alert alert-warning" role="alert">
+
+				{props.text}
+			</div>
+		)
+	} else if (props.color === 'green') {
+		return (<div className="alert alert-success" role="alert">
+
+			{props.text}
+		</div>)
+	}
 
 
 };
